@@ -15,6 +15,7 @@ ApplicationContext ctx=null;
 ctx=new ClassPathXmlApplicationContext("a.xml");
 
 System.out.println(ctx.getBean("emp"));
+  System.out.println("modified");      
 
     }
 }
