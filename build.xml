@@ -1,1 +1,44 @@
-"build"
+<?xml version="1.0"?>
+<project name="test" default="all" basedir=".">
+  <property name="src"   value="src"/>
+  <property name="build" value="build"/>
+  <property name="lib"   value="lib"/>
+
+<target name="all" depends="clean, compile" description="Builds the whole project">
+    <echo>Doing all</echo>
+  </target>
+
+<target name="Clean" description="Removes previous build">
+    <delete verbose="true">
+      <fileset dir="${build}"/>
+    </delete>
+  </target>
+
+<target name="compile" depends="clean" description="compile whole project">
+    <echo>compile ${ant.project.name} </echo>
+    <copy file="${src}/splashscreen.jpeg" tofile="${build}/splashscreen.jpeg"/>
+    <javac srcdir="${src}" destdir="${build}" includes="Test.java"/>
+  </target>
+</project>
+
+<echo>Doing all</echo>
+<echo message="Now creating directory source "/>
+<echo level="warning" message ="Active configuration (config.active property) is not set - using default." />
+
+
+<delete verbose="true">
+      <fileset dir="${build}"/>
+</delete>
+
+<target name="compile" depends="install" description="install-clean">
+  <echo> install the plugins metioned in the description</echo>
+  <copy file= 
+
+
+<target name="compile" depends="clean" description="compile whole project">
+    <echo>compile ${ant.project.name} </echo>
+    <copy file="${src}/splashscreen.jpeg" tofile="${build}/splashscreen.jpeg"/>
+    <javac srcdir="${src}" destdir="${build}" includes="Test.java"/>
+  </target>
+</project>
+
